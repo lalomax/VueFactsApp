@@ -1,34 +1,49 @@
 <script setup>
+import { ref } from 'vue';
+const facts = ref([
+  {
+    highlight: 'Lightweight',
+    text: 'I am incredibly small and fast! My core library is only around 30KB, so I won\'t slow you down.',
+  },
+  {
+    highlight: 'Approachable',
+    text: 'Easy to learn and use, even for beginners. I have a gentle learning curve, clear documentation, and a supportive community.'
+  },
+  {
+    highlight: 'Versatile',
+    text: 'I can handle everything from simple interactive elements to complex single-page applications. I\'m great for small projects and large-scale applications alike.',
+  }
+  
+])
 </script>
 
 <template>
-      <main>
+  <main>
     <section>
       <h2>
-        I'm <span class="highlight">Lightweight</span>
+        I'm <span class="highlight">{{facts[0].highlight}}</span>
       </h2>
       <p>
-        I am incredibly small and fast! My core library is only around 30KB, so I won't slow you down.
+        {{facts[0].text}}
       </p>
     </section>
     <section>
       <h2>
-        I'm <span class="highlight">Approachable</span>
+        I'm <span class="highlight">{{facts[1].highlight}}</span>
       </h2>
       <p>
-        Easy to learn and use, even for beginners. I have a gentle learning curve, clear documentation, and a supportive
-        community.
+        {{facts[1].text}}
       </p>
     </section>
     <section>
       <h2>
-        I'm <span class="highlight">Versatile</span>
+        I'm <span class="highlight">{{facts[2].highlight}}</span>
       </h2>
       <p>
-        I can handle everything from simple interactive elements to complex single-page applications. I'm great for
-        small projects and large-scale applications alike.
+        {{facts[2].text}}
       </p>
     </section>
+    
   </main>
 </template>
 
