@@ -19,30 +19,15 @@ const facts = ref([
 
 <template>
   <main>
-    <section>
+    <section v-for="fact in facts">
       <h2>
-        I'm <span class="highlight">{{facts[0].highlight}}</span>
+        I'm <span class="highlight">{{fact.highlight}}</span>
       </h2>
       <p>
-        {{facts[0].text}}
+        {{fact.text}}
       </p>
     </section>
-    <section>
-      <h2>
-        I'm <span class="highlight">{{facts[1].highlight}}</span>
-      </h2>
-      <p>
-        {{facts[1].text}}
-      </p>
-    </section>
-    <section>
-      <h2>
-        I'm <span class="highlight">{{facts[2].highlight}}</span>
-      </h2>
-      <p>
-        {{facts[2].text}}
-      </p>
-    </section>
+    
     
   </main>
 </template>
